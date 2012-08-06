@@ -2,7 +2,6 @@
 
 dir=`pwd`
 
-[ "$dir" == "$HOME" ] && echo "Cannot run script in home directory." && exit
 [ ! -e all.bib ] && echo "Error: all.bib not found." && exit
 [ ! -e generate-bib-per-category ] && echo "Error: generate-bib-per-category not found." && exit
 
