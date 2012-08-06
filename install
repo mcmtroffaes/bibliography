@@ -1,0 +1,14 @@
+#!/bin/sh
+
+dir=`pwd`
+
+[ "$dir" == "$HOME" ] && echo "Cannot run script in home directory." && exit
+[ ! -e all.bib ] && echo "Error: all.bib not found." && exit
+[ ! -e generate-bib-per-category ] && echo "Error: generate-bib-per-category not found." && exit
+
+rm -f ~/texmf/bibtex/bib/all.bib ~/.local/bin/generate-bib-per-category
+mkdir -p ~/.local/bin/
+mkdir -p ~/texmf/bibtex/bib/
+ln -s $dir/all.bib ~/texmf/bibtex/bib/
+ln -s $dir/generate-bib-per-category ~/.local/bin/
+
