@@ -1,0 +1,4 @@
+*.tex text=auto
+*.bib text=auto
+generate-bib-per-category text eol=lf
+install text eol=lf
